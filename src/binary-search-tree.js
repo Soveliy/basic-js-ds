@@ -21,11 +21,11 @@ class BinarySearchTree {
       if (!node) {
         return new Node(value);
       }
-      if (node.value === value) {
+      if (node.data === value) {
         return node;
       }
 
-      if (value < node.value) {
+      if (value < node.data) {
         node.left = addWithin(node.left, value);
       } else {
         node.right = addWithin(node.right, value);
@@ -50,7 +50,7 @@ class BinarySearchTree {
       if (node.data === value) {
         return node;
       }
-      if (value < node.value) {
+      if (value < node.data) {
         return searchWithin(node.left, value);
       } else {
         return searchWithin(node.right, value);
